@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}Blog Posts{% endblock %}
+
+    <!-- Bootstrap core CSS -->
+    {% block stylesheets %}
+      <!-- Custom styles for this template -->
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+      <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+    {% endblock %}
+
+
+
+
+{% block content %}
+
+{% comment %} <div class="container>"> {% endcomment %}
+  <div class="blogsphere">
+    <main role="main" class="container">
+      <div class="row">
+        <div class="col-md-8 blog-main">
+
+          <div class="blog-post">
+            {% if tag %}
+              <h2>Posts tagged with "{{ tag.name }}"</h2>
+            {% endif %}
+
+            {% for post in posts %}
+              <div class="blog-post">
+              <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+              <p class="tags">
+              {% for tag in post.tags.all %}
+                  <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                    {{ tag.name }}
+                  </a>
+                  {% if not forloop.last %}, {% endif %}
+                {% endfor %}
+                </p>
+                <p class="date">
+                  Published {{ post.publish }} by {{ post.author }}
+                </p>
+                {{ post.body|markdown|truncatewords_html:30 }}
+            {% endfor %}
+            
+
+          </div><!-- /.blog-post -->
+          
+
+          <nav class="blog-pagination">
+            {% include "blog/pagination.html" with page=posts %}
+          </nav>
+              
+        </div>
+      </div><!-- /.blog-main -->
+
+      <aside class="col-md-4 blog-sidebar">
+          {% include "blog/blog_base.html" %}
+      </aside><!-- /.blog-sidebar -->
+      
+
+      </div><!-- /.row -->
+    
+    </main><!-- /.container --> 
+  </div>
+
+
+
+{% endblock %}
+
+
+   
