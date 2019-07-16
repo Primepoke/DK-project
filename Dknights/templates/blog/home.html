@@ -1,15 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
-    <!-- Custom styles for this template -->
-  {% block stylesheets %}
-      <!-- Custom styles for this template -->
-      <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
-
-  {% endblock %}
-
-
   {% block content %}
    
      <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -63,38 +54,30 @@
       </div><!-- /.container -->
 
     <!--Reviews Section-->
-    <div class="jumbotron">
-        <div class="col-12 text-center">
-            <h3 class="heading">CLIENT REVIEWS</h3>
-            <div class="heading-underline"></div>
+    <div class="container-fluid mb-5 pb-5">
+        <div class="col-md-12 text-center">
+            <h2 class="display-4 text-dark">CLIENT REVIEWS</h2>
         </div>
 
         <div class="row">
           <div class="col-sm-4 clients">
-              <div class="col-sm-12">
               <img src="{% static 'img/client1.png' %}">
               <p>Some dummy text to test. Let's make it more. By more I mean longer. And when we done we that, we do it some more.</p>
-              </div>
           </div>
 
           <div class="col-sm-4 clients">
-              <div class="col-sm-12">
               <img src="{% static 'img/client2.png' %}">
               <p>Some dummy text to test. Let's make it more. By more I mean longer. And when we done we that, we do it some more.</p>
-              </div>
           </div>
 
           <div class="col-sm-4 clients">
-              <div class="col-sm-12">
               <img src="{% static 'img/client2.png' %}">
               <p>Some dummy text to test. Let's make it more. By more I mean longer. And when we done we that, we do it some more.</p>
-              </div>
           </div>
       
         </div>
 
     </div>
-
 
 
   {% endblock %}
