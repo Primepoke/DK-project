@@ -1,199 +1,194 @@
 /*=====BASE.HTML/HOME====*/
 
 body {
-    overflow-x: hidden!important;
-    font-family: 'lato', sans-serif;
-    padding-bottom: 0;
-    color: rgb(64, 148, 243)!important;
+  overflow-x: hidden !important;
+  font-family: "lato", sans-serif;
+  margin: o;
+  padding: 0;
+  color: rgb(64, 148, 243) !important;
 }
 
-
 /*======Navigation=======*/
-
+/* 
 .navbar {
-    text-transform: uppercase;
-    background-color: rgb(64, 148, 243)!important;
+  text-transform: uppercase;
+  background-color: rgb(64, 148, 243) !important;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white;
-    padding-top: .8rem;
+  color: white;
+  padding-top: 0.8rem;
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #1e62bb;
-}
+  color: #1e62bb;
+} */
 
 .btn-outline-success {
-    color: rgb(64, 148, 243);
-    background-color: white;
-    border-color: white;
+  color: rgb(64, 148, 243);
+  background-color: white;
+  border-color: white;
 }
 
 .btn-outline-success:hover {
-    background-color: #1e62bb;
-    border-color: #1e62bb;
+  background-color: #1e62bb;
+  border-color: #1e62bb;
 }
-
 
 /*======Carousel=======*/
 
 .carousel {
-    margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 
 .carousel-caption {
-    bottom: .1rem;
-    z-index: 10;
+  bottom: 0.1rem;
+  z-index: 10;
 }
 
-.carousel-item>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 20rem;
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 20rem;
 }
 
 .carousel-item {
-    height: 20rem;
+  height: 20rem;
 }
 
 .jumbotron {
-    margin-bottom: 0;
-    padding: 2rem 0 3.5rem;
-    border-radius: 0;
+  margin-bottom: 0;
+  padding: 2rem 0 3.5rem;
+  border-radius: 0;
 }
 
 h3.heading {
-    font-size: 1.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1.9rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
 }
 
 .heading-underline {
-    width: 3rem;
-    height: .2rem;
-    background-color: #1e62bb;
-    margin: 0 auto 2rem;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #1e62bb;
+  margin: 0 auto 2rem;
 }
-
 
 /*==========Reviews==========*/
 
 .clients img {
-    width: 50%;
-    border-radius: 50%;
-    margin-left: 7rem;
+  width: 50%;
+  border-radius: 50%;
+  margin-left: 7rem;
 }
 
 .clients p {
-    color: black;
+  color: black;
 }
 
-
 /*===========footer==========*/
-
+/* 
 footer {
-    background-color: rgb(64, 148, 243);
-    color: white;
-    padding: 2rem 0 2rem;
-    margin-top: 1rem!important;
+  background-color: rgb(64, 148, 243);
+  color: white;
+  padding: 2rem 0 2rem;
+  margin-top: 1rem !important;
 }
 
 footer img {
-    height: 3rem;
-    margin: 1.5rem 0;
+  height: 3rem;
+  margin: 1.5rem 0;
 }
 
 footer a {
-    color: white!important;
+  color: white !important;
 }
 
 footer a:hover {
-    color: blue!important;
+  color: blue !important;
 }
 
 footer svg.svg-inline--fa {
-    font-size: 1.6rem;
-    margin: 1.2rem .5rem 0 0;
-}
+  font-size: 1.6rem;
+  margin: 1.2rem 0.5rem 0 0;
+} */
 
 hr.socket {
-    width: 100%;
-    border-top: .2rem solid white;
-    margin-top: 3rem;
+  width: 100%;
+  border-top: 0.2rem solid white;
+  margin-top: 3rem;
 }
-
 
 /*=========BLOG=======*/
 
 .blogsphere {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
-
 
 /*----RESPONSIVE CSS-------*/
 
 @media (min-width: 575px) {
-    .carousel-item>img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        height: 25rem;
-    }
-    .carousel-item {
-        height: 25rem;
-    }
-    .carousel-caption h1 p {
-        margin-top: 4rem!important;
-    }
-    .clients img {
-        margin-left: 1rem;
-    }
-    .clients p {
-        font-size: .8rem;
-    }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 25rem;
+  }
+  .carousel-item {
+    height: 25rem;
+  }
+  .carousel-caption h1 p {
+    margin-top: 4rem !important;
+  }
+  .clients img {
+    margin-left: 1rem;
+  }
+  .clients p {
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 767px) {
-    .carousel-item>img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        height: 32rem;
-    }
-    .carousel-item {
-        height: 32rem;
-    }
-    .clients img {
-        width: 70%;
-        border-radius: 50%!important;
-        margin-left: 1.5rem;
-    }
-    .clients p {
-        font-size: 100%;
-    }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+  .carousel-item {
+    height: 32rem;
+  }
+  .clients img {
+    width: 70%;
+    border-radius: 50% !important;
+    margin-left: 1.5rem;
+  }
+  .clients p {
+    font-size: 100%;
+  }
 }
 
 @media (min-width: 991px) {
-    .carousel-item>img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 100%;
-        height: 40rem;
-    }
-    .carousel-item {
-        height: 40rem;
-    }
-    .clients img {
-        width: 70%;
-        border-radius: 50%!important;
-        margin-left: 3.5rem;
-    }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 40rem;
+  }
+  .carousel-item {
+    height: 40rem;
+  }
+  .clients img {
+    width: 70%;
+    border-radius: 50% !important;
+    margin-left: 3.5rem;
+  }
 }

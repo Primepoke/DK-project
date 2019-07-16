@@ -17,8 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import PostSitemap
-from blog import views
-from home import views
 
 
 sitemaps = {
@@ -26,9 +24,10 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('home/', include('home.urls', namespace='home')),
+    #Your home apps is not neccessary since all you are doing is returning a since static view
+    #path('', views.home, name='home'),
+    #path('', include('home.urls', namespace='home')),
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls', namespace='blog')),
+    path('', include('blog.urls', namespace='blog')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]

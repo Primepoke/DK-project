@@ -1,0 +1,17 @@
+I will be listing the changes i made to your project here
+
+1- SETTING.PY FILE
+    - Removed all they ".apps.BlogConfig"                ......Line 46
+
+2- I COMPLETELY REMOTED THE HOME APPLICATION AS IT WAS FIT ENOUGH TO BE AN APPLICATION ON IT'S OWN AND ADDED THE HOME PAGE TO YOUR BLOG APP
+    - Reason being that it's job was to return only a static home page which can be done using a class generic template or a simple django view in our blog app
+    - The home page is now in your blog
+        - blog/views.py     .....Line 16 - 19
+        - blog/urls.py      .....Line 9
+
+3- I ADDED A NAVBAR AND FOOTER INSIDE THE TEMPLATE FOLDER AND CLEANED UP THE BASE TEMPLATE
+    - Navbar contains the navbar that displays in our web page and it was include in our base.html using "{% include "navbar.html" %}" (base.html    .....Line 19)
+    - Footer contains the footer items that displays in our web page and it was include in our base.html using "{% include "footer.html" %}" (base.html    .....Line 27)
+    
+4- I MOVED ALL YOUR STYLESHEETS INSIDE BASE TEMPLATE
+5- ADDED ROW AND COLUMN TO MAKE SURE YOUR CONTENTS ARE BOTH SHOWING ON DIFFERENT ROWS IN YOUR BLOG POST

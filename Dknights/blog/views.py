@@ -12,10 +12,15 @@ from taggit.models import Tag
 
 # Create your views here.
 
+
+#Urls will return this view which is our index view
+def home_page(request):
+    template = 'blog/home.html'
+    return render(request, template)
+
 def post_list(request, tag_slug=None):
     object_list = Post.published.all()
     tag = None
-
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
@@ -41,10 +46,9 @@ def post_detail(request, year, month, day, post):
     post_tags_ids = post.tags.values_list('id', flat=True)
     similar_posts = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
     similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')[:4]
-
-    return render(request, 'blog/post/detail.html', {
-        'post': post, 'similar_posts': similar_posts
-    })
+    context = {'post': post, 'similar_posts': similar_posts}
+    template = 'blog/post/detail.html'
+    return render(request,template, context)
 
 
 def post_share(request, post_id):

@@ -34,17 +34,19 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
-    'home.apps.HomeConfig',
-    'services.apps.ServicesConfig',
-    'contactus.apps.ContactusConfig',
+    #you are using django 2.0 so adding ".apps.BlogConfig" is not neccessary
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'taggit',
+    'taggit', 
+    #I removed all they ".apps.BlogConfig"
+    'blog',
+    'home',
+    'services',
+    'contactus',
 ]
 
 MIDDLEWARE = [
